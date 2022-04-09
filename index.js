@@ -279,7 +279,7 @@ const internalCaptureWebsiteCore = async (input, options, page, browser) => {
 
 	await page[isHTMLContent ? 'setContent' : 'goto'](input, {
 		timeout: timeoutInMilliseconds,
-		waitUntil: 'networkidle2',
+		waitUntil: 'networkidle0',
 	});
 
 	if (options.disableAnimations) {
